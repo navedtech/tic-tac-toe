@@ -47,3 +47,28 @@ function resetGame() {
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 resetButton.addEventListener('click', resetGame);
+
+function checkWinner() {
+  for (let combination of winningCombinations) {
+    const [a, b, c] = combination;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      // Highlight the winning cells
+      cells[a].classList.add('winning-cell');
+      cells[b].classList.add('winning-cell');
+      cells[c].classList.add('winning-cell');
+      return true;
+    }
+  }
+  return false;
+}
+
+function resetGame() {
+  board = ['', '', '', '', '', '', '', '', ''];
+  currentPlayer = 'X';
+  gameActive = true;
+  statusText.textContent = `Player ${currentPlayer}'s turn`;
+  cells.forEach(cell => {
+    cell.textContent = '';
+    cell.classList.remove('winning-cell');
+  });
+}
