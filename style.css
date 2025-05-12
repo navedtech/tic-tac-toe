@@ -52,3 +52,13 @@ h1 {
   border: 2px solid transparent;
   box-shadow: 0 0 0.1rem;
 }
+
+.winning-cell {
+  background-color: #51777c;
+  animation: flash 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes flash {
+  from { background-color: #51777c; }
+  to { background-color: #51777c; }
+}
