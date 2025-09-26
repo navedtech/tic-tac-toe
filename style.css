@@ -62,3 +62,27 @@ h1 {
   from { background-color: #51777c; }
   to { background-color: #51777c; }
 }
+
+/* Box style */
+.cell {
+    width: 100px;   /* adjust as per your layout */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid #000;
+    user-select: none;
+    background-color: white; /* default background */
+    transition: background-color 0.2s;
+}
+
+/* Remove mobile highlight on tap */
+.cell:active {
+    background-color: white; /* ya jo default color ho */
+}
+
+/* Optional: Prevent blue overlay on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
