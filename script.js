@@ -72,3 +72,11 @@ function resetGame() {
     cell.classList.remove('winning-cell');
   });
 }
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach(cell => {
+    cell.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // prevent default mobile highlight
+    });
+});
