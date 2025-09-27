@@ -71,7 +71,7 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    border: 2px solid #000;
+    border: none;
     user-select: none;
     background-color: white;
     transition: background-color 0.2s ease; /
@@ -79,4 +79,8 @@ h1 {
 
 .cell:active {
     background-color: #d0d0d0; 
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }
